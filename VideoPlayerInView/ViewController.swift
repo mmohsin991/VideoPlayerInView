@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import MediaPlayer
 
 
 private var myContext = 0
@@ -21,6 +22,12 @@ class ViewController: UIViewController {
     var av : AVPlayerViewController?
     var isPlaying = false
 
+    
+    
+    var MPPlayer:MPMoviePlayerController!
+
+    
+    
     
     
     let sample = NSBundle.mainBundle().URLForResource("sample", withExtension: "mp4")
@@ -51,7 +58,26 @@ class ViewController: UIViewController {
         self.presentViewController(av, animated: true, completion: nil)
     }
 
+    
+    
     func playInView(url: NSURL){
+        
+        
+        // for MPMoviewPlayer
+//        
+//        self.MPPlayer = MPMoviePlayerController(contentURL: url)
+//        self.MPPlayer.view.frame = self.view.frame
+//        
+//        self.view.addSubview(self.MPPlayer.view)
+//        
+//        self.MPPlayer.prepareToPlay()
+//        self.MPPlayer.play()
+//        
+//        
+//        
+        
+        
+        
         
         
         self.player = AVPlayer(URL: url)
